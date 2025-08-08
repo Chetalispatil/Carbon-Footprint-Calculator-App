@@ -1,0 +1,15 @@
+import streamlit as st
+from components.overview import show_overview
+from components.category_chart import show_category_breakdown
+from components.comparison import show_comparison
+
+st.title(" Carbon Footprint Dashboard")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    show_overview()
+    show_category_breakdown()
+
+with col2:
+    show_comparison()
